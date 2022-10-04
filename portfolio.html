@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="animate.js"></script>
+</head>
+<body>
+    
+<!-- navbar section starts  -->
+
+<nav class="navbar">
+    <a href="home.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+    <a href="about.html"> <i class="fas fa-user"></i> <span>About</span> </a>
+    <a href="portfolio.html"> <i class="fas fa-briefcase"></i> <span>Portfolio</span> </a>
+    <a href="contact.html"> <i class="fas fa-address-book"></i> <span>Contact</span> </a>
+</nav>
+
+<!-- navbar section ends -->
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio">
+
+    <h1 class="heading hidden"> <span>my</span> work </h1>
+
+    <div class="box-container hidden">
+
+        <div class="box">
+            <img src="images/NessusIMG.png" alt="Nessus Project Image">
+            <div class="content">
+                <h3>Vulnerability Management</h3>
+                <p>Installed and configured Nessus Essentials to perform credentialized vulnerability scans against Windows 10 Hosts. 
+                    I implemented the sandbox networks: discover, prioritize, assess, report, remediate, and verify.</p>
+                <a href="https://www.youtube.com/watch?v=i_vfhukFuno" target="_blank" >View Here</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/SIEMIMG.png" alt="SIEM Project Image">
+            <div class="content">
+                <h3>SIEM (Azure)</h3>
+                <p>Utilized custom PowerShell script to extract metadata from Windows Event Viewer. Construct Log Analytics Workspace in Azure to ingest custom logs. Configured Azure Sentinal (Microsoft's cloud SIEM) workbook to display global attack data (RDP brute force) on world map. </p>
+                <a href="https://youtu.be/X94CdCSnipo" target="blank">View Here</a>
+            </div>
+        </div>
+       
+        <div class="box">
+            <img src="images/PortScannerIMG.png" alt="Port Scanner Project Image">
+            <div class="content">
+                <h3>Port Scanner</h3>
+                <p>Imported socket and threading to make a simple port scanner. Scanning, from the 5 phases of ethical hacking, allows a hacker to gather information on weak protocols. A port scanner will ensure that a host only has the necessary services running, disencouraging unwanted traffic.</p>
+                <a href="https://github.com/jbui02/RedTeamProjects/blob/main/Port_Scanner" target="_blank" >View Here</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/FIMIMG.jpg" alt="File Integrity Monitoring Project Image">
+            <div class="content">
+                <h3>File Integrity Monitoring</h3>
+                <p>FIM project using Windows PowerShell. From this experience, I created an integrity baseline with the SHA-512 hashing algorithim. Moreover, the program continuouosly made a comparison of actual files vs baseline, and raised alerts if any deviations occurred.</p>
+                <a href="https://www.youtube.com/watch?v=pn28SbCqGO4&t=118s" target="_blank">View Here</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/PacketSnifferIMG.png" alt="">
+            <div class="content">
+                <h3>Packet Sniffer</h3>
+                <p>Simple packet sniffer made using Scapy. The code is a man-in-the-middle capable of capturing usernames and passwords for unencrypted http websites. From this project, I am able to assure network security and provide traffic analysis. </p>
+                <a href="https://github.com/jbui02/RedTeamProjects/blob/main/Packet_Sniffer" target="_blank" >View Here</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/img-2.jpg" alt="">
+            <div class="content">
+                <h3>project 06</h3>
+                <p></p>
+                <a href="#">View Here</a>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="#" class="btn"> load more <i class="fas fa-redo"></i> </a>
+    
+</section>
+
+<!-- portfolio section ends -->
+
+</body>
+</html>
