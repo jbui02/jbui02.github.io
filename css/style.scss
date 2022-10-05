@@ -131,6 +131,7 @@ section{
   .image{
     flex:1 1 42rem;
     text-align: center;
+    position: relative; 
 
     img{
       height: 50rem;
@@ -138,6 +139,7 @@ section{
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
   }
+
 
   .content{
     flex:1 1 42rem;
