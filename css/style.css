@@ -33,7 +33,7 @@ body {
   padding-bottom: 6.5rem;
 }
 
-.divider{
+.divider {
   color: #282828;
 }
 
@@ -63,6 +63,7 @@ section {
   font-size: 1.7rem;
   color: #fff;
   padding-left: 2rem;
+  margin-right: 19rem;
 }
 
 .btn i {
@@ -173,6 +174,10 @@ section {
   color: #F2711C;
   padding: .25rem 0;
   display: block;
+}
+
+.in-line{
+  display: inline-block;
 }
 
 .wave {
