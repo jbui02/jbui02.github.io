@@ -45,12 +45,12 @@ var pJS = function(tag_id, params){
         }
       },
       opacity: {
-        value: .5,
+        value: 1,
         random: false,
         anim: {
           enable: false,
-          speed: 1.5,
-          opacity_min: .5,
+          speed: 2,
+          opacity_min: 0,
           sync: false
         }
       },
@@ -73,7 +73,7 @@ var pJS = function(tag_id, params){
       },
       move: {
         enable: true,
-        speed: 1,
+        speed: 2,
         direction: 'none',
         random: false,
         straight: false,
