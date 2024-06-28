@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy Bui's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-screen">
+        <div class="login-box">
+            <div class="user-icon"></div>
+            <p id="username-display">Jeremy Bui</p>
+            <form id="login-form">
+                <div class="input-box password-box">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <button type="submit" class="submit-button">
+                        <img src="./images/arrow-icon.png" alt="Login">
+                    </button>
+                </div>
+            </form>
+            <p id="error-message"></p>
+            <p class="link" id="hint">Give me a hint</p>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-header">
+            <span class="popup-title">Security Hint</span>
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+        </div>
+        <div class="popup-body">
+            <p>Think of the most common<strong style="color:red;"> password</strong>.</p>
+            <p>This relates to the OWASP Top 10 issue of broken authentication. Do not use or permit weak passwords...</p>
+        </div>
+        <div class="popup-footer">
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
