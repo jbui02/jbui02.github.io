@@ -370,69 +370,70 @@ section {
   text-transform: uppercase;
 }
 
-.education .box-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.education .box-container .box {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
-  margin-left: 2rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 3.5rem;
-  padding-bottom: 3rem;
-  border-left: 0.1rem solid #aaa;
+.experience .roadmap {
   position: relative;
+  padding: 4rem 0;
+  margin-left: 10%;
 }
 
-.education .box-container .box i {
-  height: 4.5rem;
-  width: 4.5rem;
-  line-height: 4.5rem;
-  font-size: 1.7rem;
+.experience .milestone {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.experience .milestone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  height: 100%;
+  width: 0.2rem;
+  background: #e1ad01;
+}
+
+.experience .milestone .content {
+  background: #1a1a1a;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  position: relative;
+  width: 80%;
+}
+
+.experience .milestone .content i {
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  font-size: 2.5rem;
   border-radius: 50%;
   background: #e1ad01;
   color: #fff;
-  text-align: center;
-  position: absolute;
-  top: -1rem;
-  left: -2.5rem;
+  padding: 0.5rem;
 }
 
-.education .box-container .box span {
-  font-size: 2.0rem;
-  font-style: italic;
-  color: #fff;
-  border-radius: 5rem;
-  padding: .5rem 1.5rem;
-  background: #3b3b3b;
+.experience .milestone .content span {
+  display: block;
+  font-size: 1.8rem;
+  color: #aaa;
+  margin-bottom: 1rem;
 }
 
-.education .box-container .box h3 {
+.experience .milestone .content h3 {
   font-size: 2.2rem;
   color: #fff;
-  padding-top: 2.5rem;
-  font-weight: normal;
-  font-style: bold;
+  margin-bottom: 1rem;
 }
 
-.education .box-container .box h4 {
-    font-size: 1.5rem;
-    color: rgb(203, 203, 203);
-    font-weight: normal;
-  }
+.experience .milestone .content h4 {
+  font-size: 1.8rem;
+  color: #e1ad01;
+  margin-bottom: 1rem;
+}
 
-.education .box-container .box p {
-  font-size: 1.5rem;
-  padding-bottom: 2rem;
+.experience .milestone .content p {
+  font-size: 1.6rem;
   color: #aaa;
-  line-height: 2;
+  line-height: 1.6;
 }
 
 .portfolio {
