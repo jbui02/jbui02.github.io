@@ -435,89 +435,143 @@ section {
   color: #aaa;
   line-height: 1.6;
 }
-
 .portfolio {
   text-align: center;
+  position: relative;
+  padding: 2rem;
 }
 
-.portfolio .box-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-  gap: 1.5rem;
+.portfolio .heading {
   margin-bottom: 2rem;
 }
 
-.portfolio .box-container .box {
-  height: 30rem;
-  box-shadow: inset 0 -3em 3em rgba(255,255,255,0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(255,255,255, 0.3);
-  overflow: hidden;
-  position: relative;
-}
-
-.portfolio .box-container .box:hover .content {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-}
-
-.portfolio .box-container .box img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.portfolio .box-container .box .content{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #59fb53;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.portfolio .main-frame {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2rem;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.portfolio .box-container .box .content h3 {
-  font-size: 2.5rem;
+.portfolio .details {
+  flex: 1;
+  padding: 2rem;
+}
+
+.portfolio .project-info {
+  text-align: left;
+}
+
+.portfolio .project-number-bubble {
+  font-size: 4rem;
+  color: #e1ad01;
+  background: #1a1a1a;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  font-family: 'Black Ops One', system-ui; /* Apply the Google Font here */
+}
+
+
+.portfolio .project-title {
+  font-size: 3rem;
   color: #fff;
   text-transform: uppercase;
-  font-weight: normal;
+  margin-bottom: 1rem;
 }
 
-.portfolio .box-container .box .content p {
-  padding: 1rem 0;
+.portfolio .project-description {
   font-size: 1.5rem;
-  line-height: 2;
   color: #aaa;
+  margin-bottom: 1rem;
 }
 
-.portfolio .box-container .box .content a {
-  font-size: 2rem;
+.portfolio .project-tools {
+  font-size: 1.5rem;
   color: #e1ad01;
+  margin-bottom: 1rem;
 }
 
-.portfolio .box-container .box .content a:hover {
+.portfolio hr {
+  border: none;
+  border-top: 1px solid #aaa;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.portfolio .visit-link {
+  font-size: 1.5rem;
+  color: #e1ad01;
+  text-decoration: none;
+  border: 1px solid #e1ad01;
+  padding: 0.5rem 1.5rem; 
+  border-radius: 5px;
+}
+
+.portfolio .visit-link:hover {
+  background-color: #e1ad01;
   color: #fff;
 }
+
+.portfolio .image-frame {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 45vh; /* Pre-set frame height */
+}
+
+.portfolio .box-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%; /* Ensure it takes the full height of the image frame */
+  overflow: hidden;
+}
+
+.portfolio .box {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.portfolio .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire area */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Blurred white drop shadow */
+  box-sizing: border-box;
+}
+
+.portfolio .arrows {
+  display: flex;
+  justify-content: flex-end; /* Align arrows to the right */
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.portfolio .arrow {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #000;
+  background-color: #e1ad01;
+  padding: 0.5rem 0.5rem; /* Ensure the arrows have square background */
+  border-radius: 10%; /* Slight rounding */
+  transition: background-color 0.3s ease;
+}
+
+.portfolio .arrow:hover {
+  background-color: #fff;
+}
+
 
 
 
