@@ -168,6 +168,7 @@ section {
       -ms-flex: 1 1 42rem;
           flex: 1 1 42rem;
   text-align: center;
+  padding-top: 10rem;
 }
 
 .home .image img {
@@ -218,6 +219,33 @@ section {
   padding: 1rem 0;
   line-height: 2;
 }
+
+.certifications {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.certifications h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 4rem;
+}
+
+.certification-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.certification-images img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+}
+
 
 .about .row {
   display: -webkit-box;
