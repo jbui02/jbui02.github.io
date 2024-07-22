@@ -474,7 +474,7 @@ section {
   justify-content: center;
   margin-bottom: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
-  font-family: 'Black Ops One', system-ui; /* Apply the Google Font here */
+  font-family: 'Black Ops One', system-ui; 
 }
 
 
@@ -524,14 +524,14 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 45vh; /* Pre-set frame height */
+  height: 45vh; 
 }
 
 .portfolio .box-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
-  height: 100%; /* Ensure it takes the full height of the image frame */
+  height: 100%;
   overflow: hidden;
 }
 
@@ -544,15 +544,15 @@ section {
 .portfolio .box img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image covers the entire area */
+  object-fit: cover; 
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Blurred white drop shadow */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
   box-sizing: border-box;
 }
 
 .portfolio .arrows {
   display: flex;
-  justify-content: flex-end; /* Align arrows to the right */
+  justify-content: flex-end; 
   gap: 1rem;
   margin-top: 1rem;
   width: 100%;
@@ -563,15 +563,33 @@ section {
   font-size: 2rem;
   color: #000;
   background-color: #e1ad01;
-  padding: 0.5rem 0.5rem; /* Ensure the arrows have square background */
-  border-radius: 10%; /* Slight rounding */
+  padding: 0.5rem 0.5rem; 
+  border-radius: 10%; 
   transition: background-color 0.3s ease;
 }
 
 .portfolio .arrow:hover {
   background-color: #fff;
 }
+@media (max-width: 768px) {
+  .portfolio .main-frame {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .portfolio .details {
+    padding: 1rem;
+  }
+
+  .portfolio .image-frame {
+    margin-top: 2rem;
+    height: 45vh; 
+  }
+
+  .portfolio .box img {
+    height: 100%; 
+  }
+}
 
 
 
