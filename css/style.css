@@ -413,28 +413,51 @@ section {
 
 .experience .milestone .content span {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #aaa;
   margin-bottom: 1rem;
 }
 
 .experience .milestone .content h3 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #fff;
   margin-bottom: 1rem;
 }
 
 .experience .milestone .content h4 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #e1ad01;
   margin-bottom: 1rem;
 }
 
 .experience .milestone .content p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #aaa;
-  line-height: 1.6;
+  line-height: 1.8;
 }
+
+.experience .milestone .content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience .milestone .content ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+.experience .milestone .content ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #e1ad01;
+  font-size: 2rem;
+  line-height: 1.5rem;
+}
+
 .portfolio {
   text-align: center;
   position: relative;
