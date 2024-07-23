@@ -659,6 +659,61 @@ section {
   }
 }
 
+.contact {
+  text-align: center;
+  padding: 2rem;
+}
+
+.contact .heading {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.contact .heading span {
+  color: #e1ad01;
+}
+
+.contact .contact-info {
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+.contact .contact-info p {
+  margin-bottom: 1rem;
+}
+
+.contact .contact-info a {
+  color: #e1ad01;
+  text-decoration: none;
+}
+
+.contact .contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact .heading {
+    font-size: 2.5rem;
+  }
+
+  .contact .contact-info {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact .heading {
+    font-size: 2rem;
+  }
+
+  .contact .contact-info {
+    font-size: 1rem;
+  }
+}
+
+
 /*# interactive scrolling */
 .hidden{
   opacity: 0;
