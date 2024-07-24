@@ -373,7 +373,8 @@ section {
 .experience .roadmap {
   position: relative;
   padding: 4rem 0;
-  margin-left: 10%;
+  margin-left: 5%; /* Reduce margin to use more horizontal space */
+  width: 90%; /* Ensure the roadmap takes up more space */
 }
 
 .experience .milestone {
@@ -397,7 +398,7 @@ section {
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   position: relative;
-  width: 80%;
+  width: 100%; /* Ensure content takes up more space */
 }
 
 .experience .milestone .content i {
@@ -445,7 +446,7 @@ section {
   position: relative;
   padding-left: 2rem;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Increase font size */
   color: #aaa;
 }
 
@@ -457,6 +458,83 @@ section {
   font-size: 2rem;
   line-height: 1.5rem;
 }
+
+@media (max-width: 768px) {
+  .experience .roadmap {
+    padding: 2rem 0;
+    margin-left: 0;
+    width: 100%; /* Use full width on smaller screens */
+  }
+
+  .experience .milestone::before {
+    left: -1rem;
+  }
+
+  .experience .milestone .content {
+    width: 100%; /* Use full width on smaller screens */
+    padding: 1rem 2rem;
+  }
+
+  .experience .milestone .content i {
+    left: -2rem;
+  }
+
+  .experience .milestone .content span {
+    font-size: 1.8rem;
+  }
+
+  .experience .milestone .content h3 {
+    font-size: 2rem;
+  }
+
+  .experience .milestone .content h4 {
+    font-size: 1.6rem;
+  }
+
+  .experience .milestone .content p {
+    font-size: 1.5rem;
+  }
+
+  .experience .milestone .content ul li {
+    font-size: 1.6rem; /* Ensure text is readable */
+  }
+
+  .experience .milestone .content ul li::before {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience .milestone .content {
+    width: 100%; /* Use full width on smaller screens */
+    padding: 1rem;
+  }
+
+  .experience .milestone .content span {
+    font-size: 1.6rem;
+  }
+
+  .experience .milestone .content h3 {
+    font-size: 1.8rem;
+  }
+
+  .experience .milestone .content h4 {
+    font-size: 1.4rem;
+  }
+
+  .experience .milestone .content p {
+    font-size: 1.3rem;
+  }
+
+  .experience .milestone .content ul li {
+    font-size: 1.5rem; /* Ensure text is readable */
+  }
+
+  .experience .milestone .content ul li::before {
+    font-size: 1.2rem;
+  }
+}
+
 
 .portfolio {
   text-align: center;
