@@ -534,8 +534,6 @@ section {
     font-size: 1.2rem;
   }
 }
-
-
 .portfolio {
   text-align: center;
   position: relative;
@@ -630,8 +628,6 @@ section {
 
 .portfolio .box-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   transition: transform 0.5s ease-in-out;
   width: 100%;
   height: 100%;
@@ -639,34 +635,19 @@ section {
 }
 
 .portfolio .box {
-  flex: 0 0 300px;
-  max-width: 300px;
-  margin: 10px;
-  position: relative;
+  flex: 0 0 100%;
+  max-width: 100%;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.portfolio .box::before {
-  content: "";
-  display: block;
-  padding-top: 75%; 
 }
 
 .portfolio .box img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover; 
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
   box-sizing: border-box;
 }
-
 
 .portfolio .arrows {
   display: flex;
@@ -689,7 +670,25 @@ section {
 .portfolio .arrow:hover {
   background-color: #fff;
 }
+@media (max-width: 768px) {
+  .portfolio .main-frame {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .portfolio .details {
+    padding: 1rem;
+  }
+
+  .portfolio .image-frame {
+    margin-top: 2rem;
+    height: 45vh; 
+  }
+
+  .portfolio .box img {
+    height: 100%; 
+  }
+}
 
 .category-buttons {
   text-align: center;
@@ -728,6 +727,7 @@ section {
     margin: 0.5rem 0.5rem;
   }
 }
+
 
 
 .share a {
