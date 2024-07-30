@@ -150,34 +150,76 @@
 <!-- portfolio section starts  -->
 <section id="portfolio" class="portfolio">
     <h1 class="heading hidden"> <span>my</span> work </h1>
-    <div class="category-buttons">
+    <!-- <div class="category-buttons">
         <button class="btn" onclick="filterProjects('all')">All</button>
         <button class="btn" onclick="filterProjects('development')">Development</button>
         <button class="btn" onclick="filterProjects('cybersecurity')">Cybersecurity</button>
         <button class="btn" onclick="filterProjects('cloud')">Cloud</button>
         <button class="btn" onclick="filterProjects('os')">OS</button>
-    </div>
+        <button class="btn" onclick="filterProjects('operations')">Operations</button>
+        <button class="btn" onclick="filterProjects('databases')">Databases</button>
+        <button class="btn" onclick="filterProjects('data science')">Data Science</button>
+    </div> -->
     <div class="main-frame">
         <div class="details">
             <div class="project-info">
                 <div class="project-number-bubble black-ops-one-regular">01</div>
-                <h2 class="project-title">Vulnerability Management</h2>
-                <p class="project-description">Installed and configured Nessus Essentials to perform credentialized vulnerability scans against Windows 10 Hosts. I implemented the sandbox networks: discover, prioritize, assess, report, remediate, and verify.</p>
-                <p class="project-tools">Tools: Nessus, Windows 10</p>
+                <h2 class="project-title">RESTler CI/CD</h2>
+                <p class="project-description">Developed an automated REST API fuzzing solution using RESTler and shell scripting to work with internal SAS APIs. This project involved continuous integration and delivery (CI/CD) pipelines to ensure the reliability and security of APIs. Additionally, I utilized Postman for testing and verifying bug buckets. (No code due to internal reasons)</p>
+                <p class="project-tools">Tools: RESTler, Shell Scripting, Postman</p>
                 <hr>
-                <a href="https://www.youtube.com/watch?v=i_vfhukFuno" class="visit-link" target="_blank">See More</a>
+                <a href="#" class="visit-link" target="_blank">See More</a>
             </div>
         </div>
         <div class="image-frame">
             <div class="box-container">
+                <div class="box project" data-category="cybersecurity" data-category2="development" data-category3="operations">
+                    <img src="images/RESTlerIMG.png" alt="RESTler Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="development" data-category2="databases">
+                    <img src="images/ootd.png" alt="OOTD Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="cybersecurity" data-category2="development" data-category3="operations">
+                    <img src="images/KyvernoIMG.png" alt="Kyverno Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="cybersecurity" data-category2="development">
+                    <img src="images/GraphQLVuln.png" alt="GraphQL Vuln Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="development" data-category2="cloud">
+                    <img src="images/LabelDetection.png" alt="Label Detection Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="os">
+                    <img src="images/DISCOS.png" alt="DISCOS Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="development" data-category2="databases">
+                    <img src="images/Muncher.png" alt="Muncher Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="data science">
+                    <img src="images/MarkeyData.png" alt="Senator Markey Data Analysis Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="development" data-category2="databases">
+                    <img src="images/Photoshare.png" alt="Photoshare Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="data science">
+                    <img src="images/CBSPotholes.png" alt="CBS Potholes Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="os">
+                    <img src="images/KeyboardModule.png" alt="Keyboard Module Project Image" id="project-image">
+                </div>
                 <div class="box project" data-category="cybersecurity">
-                    <img src="images/NessusIMG.png" alt="Nessus Project Image" id="project-image">
+                    <img src="images/AzureSIEM.png" alt="Azure SIEM Project Image" id="project-image">
                 </div>
-                <div class="box project" data-category="cloud">
-                    <img src="images/SIEMIMG.png" alt="SIEM Project Image" id="project-image">
+                <div class="box project" data-category="cybersecurity">
+                    <img src="images/FileIntegrity.jpg" alt="File Integrity Monitor Project Image" id="project-image">
                 </div>
-                <div class="box project" data-category="development">
-                    <img src="images/PortScannerIMG.png" alt="Port Scanner Project Image" id="project-image">
+                <div class="box project" data-category="cybersecurity">
+                    <img src="images/PacketSniffer.png" alt="Packet Sniffer Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="cybersecurity">
+                    <img src="images/ARP.png" alt="Wireshark ARP Poison Project Image" id="project-image">
+                </div>
+                <div class="box project" data-category="cybersecurity">
+                    <img src="images/NessusIMG.png" alt="Vulnerability Management Project Image" id="project-image">
                 </div>
             </div>
             <div class="arrows">
@@ -187,6 +229,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- portfolio section ends -->
  
@@ -336,7 +379,6 @@ var typed = new Typed(".auto-input", {
     backSpeed: 125,
     loop: true
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll('.category-buttons .btn');
   const leftArrow = document.querySelector(".left-arrow");
@@ -348,40 +390,159 @@ document.addEventListener("DOMContentLoaded", function () {
   const visitLink = document.querySelector(".visit-link");
   const imageBox = document.querySelector("#project-image");
 
+
   const projects = [
     {
       number: "01",
-      title: "Vulnerability Management",
-      description: "Installed and configured Nessus Essentials to perform credentialized vulnerability scans against Windows 10 Hosts. I implemented the sandbox networks: discover, prioritize, assess, report, remediate, and verify.",
-      tools: "Tools: Nessus, Windows 10",
-      link: "https://www.youtube.com/watch?v=i_vfhukFuno",
-      imgSrc: "images/NessusIMG.png",
-      category: "cybersecurity",
+      title: "RESTler CI/CD",
+      description: "Developed an automated REST API fuzzing solution using RESTler and shell scripting to work with internal SAS APIs. This project involved continuous integration and delivery (CI/CD) pipelines to ensure the reliability and security of APIs. Additionally, I utilized Postman for testing and verifying bug buckets. (No code due to internal reasons)",
+      tools: "Tools: RESTler, Shell Scripting, Postman",
+      link: "#",
+      imgSrc: "images/RESTlerIMG.png",
+      categories: ["cybersecurity", "development", "operations"],
     },
     {
       number: "02",
-      title: "SIEM",
-      description: "Utilized custom PowerShell script to extract metadata from Windows Event Viewer. Constructed Log Analytics Workspace in Azure to ingest custom logs. Configured Azure Sentinal (Microsoft's cloud SIEM) workbook to display global attack data (RDP brute force) on world map.",
-      tools: "Tools: PowerShell, Azure",
-      link: "https://youtu.be/X94CdCSnipo",
-      imgSrc: "images/SIEMIMG.png",
-      category: "cloud",
+      title: "Outfit Of The Day",
+      description: "Designed and implemented an AI-powered clothing assistant using Kotlin. The application leverages Firebase for backend services, integrates with a Weather API to provide weather-based outfit recommendations, and utilizes Google Calendar to suggest outfits based on the user's schedule and occasions.",
+      tools: "Tools: Kotlin, Firebase, Weather API, Google Calendar",
+      link: "https://github.com/Akhil-Kokkula/OutfitOfTheDay",
+      imgSrc: "images/ootd.png",
+      categories: ["development", "databases"],
     },
     {
       number: "03",
-      title: "Port Scanner",
-      description: "Imported socket and threading to make a simple port scanner. Scanning, from the 5 phases of ethical hacking, allows a hacker to gather information on weak protocols. A port scanner will ensure that a host only has the necessary services running, disencouraging unwanted traffic.",
-      tools: "Tools: Socket, Threading",
-      link: "https://github.com/jbui02/RedTeamProjects/blob/main/Port_Scanner",
-      imgSrc: "images/PortScannerIMG.png",
-      category: "development",
+      title: "Kyverno CI/CD",
+      description: "Automated the Kyverno Policy Manager to align with Pod Security Admission Standards using Python. The Python application installed Kyverno for Kubectl, applied predefined security policies, and generated detailed policy reports in both UI and CSV formats. This ensured compliance and security within Kubernetes clusters. (No code due to internal reasons)",
+      tools: "Tools: Python, Kyverno, Kubectl",
+      link: "#",
+      imgSrc: "images/KyvernoIMG.png",
+      categories: ["cybersecurity", "development", "operations"],
+    },
+    {
+      number: "04",
+      title: "GraphQL Vulnerability Crawler",
+      description: "Developed a GraphQL vulnerability crawler to automate the detection of OWASP top 10 injection vulnerabilities. The project, which was voted best in the Master's course, involved creating numerous test cases based on CVEs and OWASP standards using Python. This tool enhances security by identifying potential security flaws in GraphQL implementations.",
+      tools: "Tools: Python, OWASP",
+      link: "https://github.com/Erichen294/API-Security-Crawler",
+      imgSrc: "images/GraphQLVuln.png",
+      categories: ["cybersecurity", "development"],
+    },
+    {
+      number: "05",
+      title: "Label Detection",
+      description: "Implemented a label detection system using AWS services. The application allows users to upload images to an S3 bucket, processes the images using AWS Rekognition, and retrieves confidence labels and bounding boxes for detected objects. This project involved IAM for secure access management and Python for backend processing.",
+      tools: "Tools: AWS S3, AWS Rekognition, AWS IAM, Python",
+      link: "https://github.com/bui-jeremy/aws-image-label-generation",
+      imgSrc: "images/LabelDetection.png",
+      categories: ["development", "cloud"],
+    },
+    {
+      number: "06",
+      title: "DISCOS",
+      description: "Developed a custom shell environment named DISCOS with built-in commands such as cat, ls, and echo. The project involved creating a separate memory space for each command, implementing process management, inter-process communication, and basic file system operations using C.",
+      tools: "Tools: C, Operating Systems",
+      link: "https://github.com/bui-jeremy/Shell-Filesystem/tree/main/kernel",
+      imgSrc: "images/DISCOS.png",
+      categories: ["os"],
+    },
+    {
+      number: "07",
+      title: "Muncher",
+      description: "Developed a restaurant selection application using C# and .NET Blazor framework. The application features a swiping interface for users to select restaurants, dynamically fetching restaurant data based on user preferences. This project involved integrating with external APIs and managing user sessions.",
+      tools: "Tools: C#, .NET, Blazor",
+      link: "https://github.com/jameswong2003/Munch",
+      imgSrc: "images/Muncher.png",
+      categories: ["development", "databases"],
+    },
+    {
+      number: "08",
+      title: "Senator Markey Data Analysis",
+      description: "Collaborated with Boston's Senator Markey's office to analyze policy impacts using data science techniques. Utilized Python pandas for data manipulation, matplotlib for data visualization, and performed regression analysis and hypothesis testing to identify any disproportionate policy effects across different groups.",
+      tools: "Tools: Python, pandas, matplotlib",
+      link: "https://lookerstudio.google.com/reporting/881a80ac-d734-40fe-9650-fb353ba7b146",
+      imgSrc: "images/MarkeyData.png",
+      categories: ["data science"],
+    },
+    {
+      number: "09",
+      title: "Photoshare",
+      description: "Developed a social media platform similar to Facebook using Python Flask and SQLite. This project involved designing a complex database schema, implementing user authentication, and handling CRUD operations efficiently to manage user-generated content.",
+      tools: "Tools: Python, Flask, SQLite",
+      link: "https://github.com/bui-jeremy/photoshare",
+      imgSrc: "images/Photoshare.png",
+      categories: ["development", "databases"],
+    },
+    {
+      number: "10",
+      title: "CBS Potholes",
+      description: "Conducted a data analysis project with CBS to investigate funding disparities in 311 reports for potholes. Used Python pandas to manipulate and analyze data, and created visualizations to map road surface areas per pothole, providing a fair metric for resource allocation.",
+      tools: "Tools: Python, pandas",
+      link: "#",
+      imgSrc: "images/CBSPotholes.png",
+      categories: ["data science"],
+    },
+    {
+      number: "11",
+      title: "Keyboard Module",
+      description: "Implemented a custom keyboard module using C and kernel modules. This project involved developing low-level code to interact with the operating system's kernel, enabling users to type using the custom module and understand kernel programming concepts.",
+      tools: "Tools: C, Kernel Modules",
+      link: "https://github.com/bui-jeremy/keyboard",
+      imgSrc: "images/KeyboardModule.png",
+      categories: ["os"],
+    },
+    {
+      number: "12",
+      title: "Azure SIEM",
+      description: "Configured an Azure SIEM solution using custom PowerShell scripts to extract metadata from Windows Event Viewer. Built a Log Analytics Workspace in Azure to ingest custom logs and configured Azure Sentinel to visualize global attack data, including RDP brute force attempts.",
+      tools: "Tools: PowerShell, Azure, Azure Sentinel",
+      link: "https://youtu.be/X94CdCSnipo",
+      imgSrc: "images/AzureSIEM.png",
+      categories: ["cybersecurity"],
+    },
+    {
+      number: "13",
+      title: "File Integrity Monitor",
+      description: "Developed a File Integrity Monitor (FIM) using Windows PowerShell. The project involved creating an integrity baseline with the SHA-512 hashing algorithm, continuously comparing actual files against the baseline, and raising alerts for any deviations, ensuring file system integrity.",
+      tools: "Tools: PowerShell, SHA-512",
+      link: "https://www.youtube.com/watch?v=pn28SbCqGO4&t=118s",
+      imgSrc: "images/FileIntegrity.jpg",
+      categories: ["cybersecurity"],
+    },
+    {
+      number: "14",
+      title: "Packet Sniffer",
+      description: "Implemented a packet sniffer capable of capturing usernames and passwords for unencrypted HTTP websites using Wireshark. Additionally, developed a simple packet sniffer using Scapy, enabling network security analysis and traffic monitoring.",
+      tools: "Tools: Wireshark, Scapy",
+      link: "https://github.com/jbui02/RedTeamProjects/blob/main/Packet_Sniffer",
+      imgSrc: "images/PacketSniffer.png",
+      categories: ["cybersecurity"],
+    },
+    {
+      number: "15",
+      title: "Wireshark ARP Poison",
+      description: "Deployed an ARP poisoning attack using VMware with Kali Linux. Analyzed network packets to identify ARP poisoning by comparing MAC gateway addresses and implemented security measures to detect ARP poisons with Wireshark.",
+      tools: "Tools: Wireshark, Kali Linux",
+      link: "https://youtu.be/M9hAIt-qnLA",
+      imgSrc: "images/ARP.png",
+      categories: ["cybersecurity"],
+    },
+    {
+      number: "16",
+      title: "Vulnerability Management",
+      description: "Installed and configured Nessus Essentials to perform credentialed vulnerability scans against Windows 10 hosts. Implemented sandbox environments to discover, prioritize, assess, report, remediate, and verify vulnerabilities, ensuring comprehensive vulnerability management.",
+      tools: "Tools: Nessus, Windows 10",
+      link: "https://www.youtube.com/watch?v=i_vfhukFuno",
+      imgSrc: "images/NessusIMG.png",
+      categories: ["cybersecurity"],
     },
   ];
 
   let currentIndex = 0;
+  let visibleProjects = projects;
 
   function updateProjectDetails(index) {
-    const project = projects[index];
+    const project = visibleProjects[index];
     projectNumber.textContent = project.number;
     projectTitle.textContent = project.title;
     projectDescription.textContent = project.description;
@@ -391,17 +552,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function handleArrowClick(direction) {
-    const visibleProjects = projects.filter(project => {
-      const projectElement = document.querySelector(`.project[data-category="${project.category}"]`);
-      return projectElement && projectElement.style.display !== 'none';
-    });
-
     if (direction === "left") {
       currentIndex = (currentIndex - 1 + visibleProjects.length) % visibleProjects.length;
     } else {
       currentIndex = (currentIndex + 1) % visibleProjects.length;
     }
-    updateProjectDetails(visibleProjects[currentIndex]);
+    updateProjectDetails(currentIndex);
   }
 
   leftArrow.addEventListener("click", () => handleArrowClick("left"));
@@ -412,23 +568,19 @@ document.addEventListener("DOMContentLoaded", function () {
   function filterProjects(category) {
     const projectElements = document.querySelectorAll('.project');
     projectElements.forEach(element => {
-      const projectCategory = element.getAttribute('data-category');
-      if (category === 'all' || projectCategory === category) {
+      const projectCategories = element.getAttribute('data-category').split(" ");
+      if (category === 'all' || projectCategories.includes(category)) {
         element.style.display = 'block';
       } else {
         element.style.display = 'none';
       }
     });
 
-    // Reset currentIndex and update the project details after filtering
-    currentIndex = 0;
-    const firstVisibleProject = projects.findIndex(project => {
-      const projectElement = document.querySelector(`.project[data-category="${project.category}"]`);
-      return projectElement && projectElement.style.display !== 'none';
-    });
+    visibleProjects = projects.filter(project => category === 'all' || project.categories.includes(category));
 
-    if (firstVisibleProject !== -1) {
-      updateProjectDetails(firstVisibleProject);
+    currentIndex = 0;
+    if (visibleProjects.length > 0) {
+      updateProjectDetails(currentIndex);
     }
 
     buttons.forEach(button => button.classList.remove('active'));
@@ -437,11 +589,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.filterProjects = filterProjects;
-});
-const allButton = document.querySelector(`.btn[onclick="filterProjects('all')"]`);
+
+  const allButton = document.querySelector(`.btn[onclick="filterProjects('all')"]`);
   if (allButton) {
     allButton.classList.add('active');
   }
+});
+
 </script>
 </body>
 </html>
