@@ -472,7 +472,7 @@ section {
 
   .experience .milestone .content {
     width: 100%; /* Use full width on smaller screens */
-    padding: 1rem 2rem;
+    padding: 2rem 4rem;
   }
 
   .experience .milestone .content i {
