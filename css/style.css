@@ -417,7 +417,9 @@ section {
   font-size: 2rem;
   color: #aaa;
   margin-bottom: 1rem;
+  padding-top: 2rem; /* Add padding on top */
 }
+
 
 .experience .milestone .content h3 {
   font-size: 2.5rem;
@@ -472,7 +474,7 @@ section {
 
   .experience .milestone .content {
     width: 100%; /* Use full width on smaller screens */
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
   }
 
   .experience .milestone .content i {
@@ -496,7 +498,7 @@ section {
   }
 
   .experience .milestone .content ul li {
-    font-size: 1.6rem; /* Ensure text is readable */
+    font-size: 1.6rem; 
   }
 
   .experience .milestone .content ul li::before {
